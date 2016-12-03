@@ -39,7 +39,7 @@ def outputExpenses(finalExpenses, file):
         file.write("You are broke with" 'finalExpenses' "Dollars.")
     return
 
-file = open("Finances", 'w')
+file = open("C:\Users\Alec\Desktop", 'w')
 monthExpenses = []
 global calculatedNum
 calculatedNum = 0
