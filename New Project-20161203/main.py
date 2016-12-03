@@ -11,12 +11,10 @@ def inputExpenses(monthExpenses, months, categories):
         print "During the month of" ,months[i], "you spent" ,monthExpenses[i]
     return
 
-
-    
-
 def prediction(calculatedNum, studentIncome):
-    adjustedIncome =(abs(calculatedNum) + studentIncome + 300)
-    print "in order to live comfortably next semester you will need " ,adjustedIncome, "."
+    if finalExpenses <= 0:
+        adjustedIncome =(abs(calculatedNum) + abs(finalExpenses) + 300)
+        print "In order to live comfortably next semester you will need " ,adjustedIncome, "."
     return
 
 def outputExpenses(finalExpenses):
@@ -39,21 +37,9 @@ studentIncome = input("What is your income for the fall semester?")
 global finalExpenses
 finalExpenses = 0
 
-
-
-
 inputExpenses(monthExpenses, months, categories)
 for i in monthExpenses[:]:
     calculatedNum += int(i)
     finalExpenses = (studentIncome - calculatedNum)
 outputExpenses(finalExpenses)
 prediction(calculatedNum, studentIncome)
-
-
-
-
-
-
-
-
-
